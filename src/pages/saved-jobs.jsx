@@ -61,12 +61,16 @@ import useFetch from "@/hooks/use-fetch";
 import { getSavedJobs } from "@/api/apiJobs";
 import { useUser } from "@clerk/clerk-react";
 import { BarLoader } from "react-spinners";
+import savedJobsData from "@/data/saved-jobs.json";
 
 const SavedJobs = () => {
-  const { user } = useUser();
+  const { user, isLoaded } = useUser();
   const [jobs, setJobs] = useState([]);
 
   const { loading, data, fn } = useFetch(getSavedJobs);
+
+  // Fallback to dummy data
+  const displayJobs = data || savedJobsData.filter(saved => saved.user_id === user?.id);
 
   useEffect(() => {
     if (user?.id) {
@@ -77,22 +81,44 @@ const SavedJobs = () => {
   useEffect(() => {
     if (data) {
       setJobs(data);
+    } else {
+      // Use dummy data filtered by user
+      setJobs(savedJobsData.filter(saved => saved.user_id === user?.id));
     }
-  }, [data]);
+  }, [data, user]);
+
+  if (!isLoaded) {
+    return <BarLoader className="mb-4" width={"100%"} color="#36d7b7" />;
+  }
 
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold mb-4">Saved Jobs</h2>
-      {loading && <BarLoader width="100%" color="#36d7b7" />}
-      <div className="grid gap-4">
-        {jobs.length > 0 ? (
-          jobs.map((job) => (
-            <JobCard key={job.id} job={job} savedInit={true} />
-          ))
-        ) : (
-          !loading && <p>No saved jobs found.</p>
-        )}
-      </div>
+    <div>
+      <h1 className="gradient-title font-extrabold text-6xl sm:text-7xl text-center pb-8">
+        Saved Jobs
+      </h1>
+
+      {loading && (
+        <BarLoader className="mt-4" width={"100%"} color="#36d7b7" />
+      )}
+
+      {!loading && (
+        <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {displayJobs?.length ? (
+            displayJobs.map((saved) => {
+              return (
+                <JobCard
+                  key={saved.id}
+                  job={saved?.job}
+                  onJobAction={() => {}}
+                  savedInit={true}
+                />
+              );
+            })
+          ) : (
+            <div>No Saved Jobs 👀</div>
+          )}
+        </div>
+      )}
     </div>
   );
 };

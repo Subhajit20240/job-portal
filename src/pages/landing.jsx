@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -15,8 +16,46 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import useFetch from "@/hooks/use-fetch";
+import { getCompanies } from "@/api/apiCompanies";
+import { getJobs } from "@/api/apiJobs";
+import jobsData from "@/data/jobs.json";
 
 const LandingPage = () => {
+  const [stats, setStats] = useState({
+    totalJobs: 0,
+    totalCompanies: 0,
+    openJobs: 0
+  });
+
+  const {
+    data: companiesData,
+    fn: fnCompanies,
+  } = useFetch(getCompanies);
+
+  const {
+    data: jobsApiData,
+    fn: fnJobs,
+  } = useFetch(getJobs, {});
+
+  useEffect(() => {
+    // Fetch data without authentication for public stats
+    fnCompanies();
+    fnJobs();
+  }, []);
+
+  useEffect(() => {
+    // Use API data if available, otherwise use dummy data
+    const displayCompanies = companiesData || companies;
+    const displayJobs = jobsApiData || jobsData;
+    
+    setStats({
+      totalJobs: displayJobs.length,
+      totalCompanies: displayCompanies.length,
+      openJobs: displayJobs.filter(job => job.isOpen).length
+    });
+  }, [companiesData, jobsApiData]);
+
   return (
     <main className="flex flex-col gap-10 sm:gap-20 py-10 sm:py-20">
       <section className="text-center ">
@@ -34,6 +73,28 @@ const LandingPage = () => {
         <p className="text-gray-300 sm:mt-4 text-xs sm:text-xl">
           Explore thousands of job listings or find the perfect candidate
         </p>
+        
+        {/* Live Statistics */}
+        <div className="flex justify-center gap-8 mt-8">
+          <div className="text-center">
+            <div className="text-2xl sm:text-4xl font-bold text-blue-400">
+              {stats.openJobs}+
+            </div>
+            <div className="text-sm sm:text-base text-gray-400">Active Jobs</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl sm:text-4xl font-bold text-green-400">
+              {stats.totalCompanies}+
+            </div>
+            <div className="text-sm sm:text-base text-gray-400">Companies</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl sm:text-4xl font-bold text-purple-400">
+              {stats.totalJobs}+
+            </div>
+            <div className="text-sm sm:text-base text-gray-400">Total Jobs</div>
+          </div>
+        </div>
       </section>
       <div className="flex gap-6 justify-center">
         <Link to={"/jobs"}>

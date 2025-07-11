@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { getApplications } from "@/api/apiApplication";
 import useFetch from "@/hooks/use-fetch";
 import { BarLoader } from "react-spinners";
+import applicationsData from "@/data/applications.json";
 
 const CreatedApplications = () => {
   const { user } = useUser();
@@ -16,6 +17,9 @@ const CreatedApplications = () => {
     user_id: user.id,
   });
 
+  // Fallback to dummy data
+  const displayApplications = applications || applicationsData.filter(app => app.user_id === user?.id);
+
   useEffect(() => {
     fnApplications();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -27,15 +31,21 @@ const CreatedApplications = () => {
 
   return (
     <div className="flex flex-col gap-2">
-      {applications?.map((application) => {
-        return (
-          <ApplicationCard
-            key={application.id}
-            application={application}
-            isCandidate={true}
-          />
-        );
-      })}
+      {displayApplications?.length ? (
+        displayApplications.map((application) => {
+          return (
+            <ApplicationCard
+              key={application.id}
+              application={application}
+              isCandidate={true}
+            />
+          );
+        })
+      ) : (
+        <div className="text-center text-gray-500 mt-8">
+          No applications found. Start applying to jobs!
+        </div>
+      )}
     </div>
   );
 };

@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "job_id": 1,
+    "user_id": "user_001",
+    "status": "applied",
+    "resume": "john_doe_resume.pdf",
+    "cover_letter": "I am excited to apply for the Senior Frontend Developer position at Google. With over 5 years of experience in React development, I believe I would be a great fit for your team.",
+    "created_at": "2024-01-16T10:30:00Z",
+    "updated_at": "2024-01-16T10:30:00Z",
+    "job": {
+      "id": 1,
+      "title": "Senior Frontend Developer",
+      "company": {
+        "name": "Google",
+        "logo_url": "/companies/google.webp"
+      },
+      "location": "Maharashtra"
+    }
+  },
+  {
+    "id": 2,
+    "job_id": 3,
+    "user_id": "user_001",
+    "status": "interviewing",
+    "resume": "john_doe_resume.pdf",
+    "cover_letter": "I am interested in the Full Stack Developer role at Microsoft. My experience with both frontend and backend technologies makes me a strong candidate.",
+    "created_at": "2024-01-15T14:20:00Z",
+    "updated_at": "2024-01-18T09:15:00Z",
+    "job": {
+      "id": 3,
+      "title": "Full Stack Developer",
+      "company": {
+        "name": "Microsoft",
+        "logo_url": "/companies/microsoft.webp"
+      },
+      "location": "Delhi"
+    }
+  },
+  {
+    "id": 3,
+    "job_id": 5,
+    "user_id": "user_001",
+    "status": "rejected",
+    "resume": "john_doe_resume.pdf",
+    "cover_letter": "I would like to apply for the Data Scientist position. My background in machine learning and statistical analysis aligns well with your requirements.",
+    "created_at": "2024-01-12T11:45:00Z",
+    "updated_at": "2024-01-20T16:30:00Z",
+    "job": {
+      "id": 5,
+      "title": "Data Scientist",
+      "company": {
+        "name": "IBM",
+        "logo_url": "/companies/ibm.svg"
+      },
+      "location": "Telangana"
+    }
+  },
+  {
+    "id": 4,
+    "job_id": 7,
+    "user_id": "user_002",
+    "status": "applied",
+    "resume": "jane_smith_resume.pdf",
+    "cover_letter": "I am passionate about creating exceptional user experiences and would love to join the Atlassian design team.",
+    "created_at": "2024-01-14T13:20:00Z",
+    "updated_at": "2024-01-14T13:20:00Z",
+    "job": {
+      "id": 7,
+      "title": "UI/UX Designer",
+      "company": {
+        "name": "Atlassian",
+        "logo_url": "/companies/atlassian.svg"
+      },
+      "location": "West Bengal"
+    }
+  },
+  {
+    "id": 5,
+    "job_id": 2,
+    "user_id": "user_003",
+    "status": "hired",
+    "resume": "mike_johnson_resume.pdf",
+    "cover_letter": "I am excited about the Backend Engineer opportunity at Amazon. My experience with microservices and cloud platforms would be valuable to your team.",
+    "created_at": "2024-01-13T09:30:00Z",
+    "updated_at": "2024-01-22T14:45:00Z",
+    "job": {
+      "id": 2,
+      "title": "Backend Engineer",
+      "company": {
+        "name": "Amazon",
+        "logo_url": "/companies/amazon.svg"
+      },
+      "location": "Karnataka"
+    }
+  }
+]

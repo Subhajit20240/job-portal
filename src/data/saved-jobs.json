@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "user_id": "user_001",
+    "job_id": 4,
+    "created_at": "2024-01-17T10:30:00Z",
+    "job": {
+      "id": 4,
+      "title": "DevOps Engineer",
+      "description": "Looking for a DevOps Engineer to streamline our development and deployment processes. You will work on automation, monitoring, and infrastructure management.",
+      "location": "Tamil Nadu",
+      "company": {
+        "id": 7,
+        "name": "Netflix",
+        "logo_url": "/companies/netflix.png"
+      },
+      "salary_min": 1300000,
+      "salary_max": 2200000,
+      "job_type": "Full-time",
+      "experience_level": "Mid-level",
+      "isOpen": true
+    }
+  },
+  {
+    "id": 2,
+    "user_id": "user_001",
+    "job_id": 6,
+    "created_at": "2024-01-16T15:45:00Z",
+    "job": {
+      "id": 6,
+      "title": "Mobile App Developer",
+      "description": "We're looking for a skilled Mobile App Developer to create innovative mobile applications for iOS and Android platforms.",
+      "location": "Gujarat",
+      "company": {
+        "id": 8,
+        "name": "Uber",
+        "logo_url": "/companies/uber.svg"
+      },
+      "salary_min": 1100000,
+      "salary_max": 1900000,
+      "job_type": "Full-time",
+      "experience_level": "Mid-level",
+      "isOpen": true
+    }
+  },
+  {
+    "id": 3,
+    "user_id": "user_001",
+    "job_id": 8,
+    "created_at": "2024-01-15T12:20:00Z",
+    "job": {
+      "id": 8,
+      "title": "Product Manager",
+      "description": "We're seeking an experienced Product Manager to drive product strategy and execution.",
+      "location": "Maharashtra",
+      "company": {
+        "id": 5,
+        "name": "Meta",
+        "logo_url": "/companies/meta.svg"
+      },
+      "salary_min": 1800000,
+      "salary_max": 3000000,
+      "job_type": "Full-time",
+      "experience_level": "Senior",
+      "isOpen": true
+    }
+  },
+  {
+    "id": 4,
+    "user_id": "user_002",
+    "job_id": 9,
+    "created_at": "2024-01-14T09:15:00Z",
+    "job": {
+      "id": 9,
+      "title": "Junior Frontend Developer",
+      "description": "Great opportunity for a Junior Frontend Developer to start their career in web development.",
+      "location": "Karnataka",
+      "company": {
+        "id": 3,
+        "name": "Google",
+        "logo_url": "/companies/google.webp"
+      },
+      "salary_min": 600000,
+      "salary_max": 1000000,
+      "job_type": "Full-time",
+      "experience_level": "Entry-level",
+      "isOpen": true
+    }
+  },
+  {
+    "id": 5,
+    "user_id": "user_002",
+    "job_id": 11,
+    "created_at": "2024-01-13T16:30:00Z",
+    "job": {
+      "id": 11,
+      "title": "QA Engineer",
+      "description": "Join our quality assurance team to ensure the delivery of high-quality software products.",
+      "location": "Rajasthan",
+      "company": {
+        "id": 6,
+        "name": "Microsoft",
+        "logo_url": "/companies/microsoft.webp"
+      },
+      "salary_min": 800000,
+      "salary_max": 1400000,
+      "job_type": "Full-time",
+      "experience_level": "Mid-level",
+      "isOpen": true
+    }
+  }
+]

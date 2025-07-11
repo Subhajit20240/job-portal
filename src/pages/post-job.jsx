@@ -30,6 +30,8 @@ const schema = z.object({
   location: z.string().min(1, { message: "Select a location" }),
   company_id: z.string().min(1, { message: "Select or Add a new Company" }),
   requirements: z.string().min(1, { message: "Requirements are required" }),
+  salary_min: z.number().min(0, { message: "Minimum salary must be positive" }).optional(),
+  salary_max: z.number().min(0, { message: "Maximum salary must be positive" }).optional(),
 });
 
 const PostJob = () => {
@@ -157,6 +159,29 @@ const PostJob = () => {
         {errors.company_id && (
           <p className="text-red-500">{errors.company_id.message}</p>
         )}
+
+        <div className="flex gap-4 items-center">
+          <div className="flex-1">
+            <Input 
+              placeholder="Minimum Salary (₹)" 
+              type="number"
+              {...register("salary_min", { valueAsNumber: true })} 
+            />
+            {errors.salary_min && (
+              <p className="text-red-500 text-sm mt-1">{errors.salary_min.message}</p>
+            )}
+          </div>
+          <div className="flex-1">
+            <Input 
+              placeholder="Maximum Salary (₹)" 
+              type="number"
+              {...register("salary_max", { valueAsNumber: true })} 
+            />
+            {errors.salary_max && (
+              <p className="text-red-500 text-sm mt-1">{errors.salary_max.message}</p>
+            )}
+          </div>
+        </div>
 
         <Controller
           name="requirements"

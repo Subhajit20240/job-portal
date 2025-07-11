@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "title": "Senior Frontend Developer",
+    "description": "We are looking for a Senior Frontend Developer to join our dynamic team. You will be responsible for developing user-facing web applications using modern JavaScript frameworks. The ideal candidate should have experience with React, Vue.js, or Angular, and a strong understanding of responsive design principles. You'll work closely with our design team to implement pixel-perfect interfaces and collaborate with backend developers to integrate APIs. This role offers opportunities to work on cutting-edge projects and mentor junior developers.",
+    "location": "Maharashtra",
+    "company_id": 3,
+    "company": {
+      "id": 3,
+      "name": "Google",
+      "logo_url": "/companies/google.webp"
+    },
+    "requirements": "5+ years of experience in frontend development, Expert knowledge of React.js, Strong understanding of HTML5, CSS3, and JavaScript ES6+, Experience with state management libraries (Redux, Zustand), Familiarity with testing frameworks (Jest, Cypress), Knowledge of build tools (Webpack, Vite)",
+    "isOpen": true,
+    "recruiter_id": "rec_001",
+    "created_at": "2024-01-15T10:00:00Z",
+    "salary_min": 1200000,
+    "salary_max": 2000000,
+    "job_type": "Full-time",
+    "experience_level": "Senior"
+  },
+  {
+    "id": 2,
+    "title": "Backend Engineer",
+    "description": "Join our backend team to build scalable and robust server-side applications. You will design and implement RESTful APIs, work with databases, and ensure high performance and responsiveness. The role involves working with microservices architecture and cloud platforms. You'll be responsible for optimizing database queries, implementing caching strategies, and ensuring security best practices. Experience with containerization and CI/CD pipelines is highly valued.",
+    "location": "Karnataka",
+    "company_id": 1,
+    "company": {
+      "id": 1,
+      "name": "Amazon",
+      "logo_url": "/companies/amazon.svg"
+    },
+    "requirements": "3+ years of backend development experience, Proficiency in Node.js, Python, or Java, Experience with databases (PostgreSQL, MongoDB), Knowledge of cloud platforms (AWS, GCP, Azure), Understanding of microservices architecture, Experience with Docker and Kubernetes",
+    "isOpen": true,
+    "recruiter_id": "rec_002",
+    "created_at": "2024-01-14T09:30:00Z",
+    "salary_min": 1000000,
+    "salary_max": 1800000,
+    "job_type": "Full-time",
+    "experience_level": "Mid-level"
+  },
+  {
+    "id": 3,
+    "title": "Full Stack Developer",
+    "description": "We're seeking a versatile Full Stack Developer to work on both frontend and backend technologies. You'll be involved in the complete software development lifecycle, from conception to deployment. The role requires expertise in modern web technologies and the ability to work independently on various projects. You'll collaborate with cross-functional teams to deliver high-quality software solutions and contribute to architectural decisions.",
+    "location": "Delhi",
+    "company_id": 6,
+    "company": {
+      "id": 6,
+      "name": "Microsoft",
+      "logo_url": "/companies/microsoft.webp"
+    },
+    "requirements": "4+ years of full stack development experience, Proficiency in React.js and Node.js, Experience with TypeScript, Knowledge of database design and optimization, Familiarity with cloud services, Understanding of DevOps practices",
+    "isOpen": true,
+    "recruiter_id": "rec_003",
+    "created_at": "2024-01-13T14:20:00Z",
+    "salary_min": 1500000,
+    "salary_max": 2500000,
+    "job_type": "Full-time",
+    "experience_level": "Senior"
+  },
+  {
+    "id": 4,
+    "title": "DevOps Engineer",
+    "description": "Looking for a DevOps Engineer to streamline our development and deployment processes. You will work on automation, monitoring, and infrastructure management. The role involves setting up CI/CD pipelines, managing cloud infrastructure, and ensuring system reliability. You'll collaborate with development teams to improve deployment frequency and reduce lead time for changes. Experience with infrastructure as code and monitoring tools is essential.",
+    "location": "Tamil Nadu",
+    "company_id": 7,
+    "company": {
+      "id": 7,
+      "name": "Netflix",
+      "logo_url": "/companies/netflix.png"
+    },
+    "requirements": "3+ years of DevOps experience, Expertise in AWS/Azure/GCP, Proficiency with Docker and Kubernetes, Experience with CI/CD tools (Jenkins, GitLab CI), Knowledge of Infrastructure as Code (Terraform, CloudFormation), Monitoring and logging tools experience",
+    "isOpen": true,
+    "recruiter_id": "rec_004",
+    "created_at": "2024-01-12T11:45:00Z",
+    "salary_min": 1300000,
+    "salary_max": 2200000,
+    "job_type": "Full-time",
+    "experience_level": "Mid-level"
+  },
+  {
+    "id": 5,
+    "title": "Data Scientist",
+    "description": "Join our data science team to extract insights from large datasets and build predictive models. You will work on machine learning projects, statistical analysis, and data visualization. The role involves collaborating with business stakeholders to understand requirements and translate them into analytical solutions. You'll use various tools and programming languages to process and analyze data, and present findings to both technical and non-technical audiences.",
+    "location": "Telangana",
+    "company_id": 4,
+    "company": {
+      "id": 4,
+      "name": "IBM",
+      "logo_url": "/companies/ibm.svg"
+    },
+    "requirements": "Master's degree in Data Science, Statistics, or related field, 3+ years of experience in data science, Proficiency in Python and R, Experience with machine learning libraries (scikit-learn, TensorFlow, PyTorch), Strong SQL skills, Knowledge of data visualization tools (Tableau, Power BI)",
+    "isOpen": true,
+    "recruiter_id": "rec_005",
+    "created_at": "2024-01-11T16:30:00Z",
+    "salary_min": 1400000,
+    "salary_max": 2300000,
+    "job_type": "Full-time",
+    "experience_level": "Mid-level"
+  },
+  {
+    "id": 6,
+    "title": "Mobile App Developer",
+    "description": "We're looking for a skilled Mobile App Developer to create innovative mobile applications for iOS and Android platforms. You will be responsible for the entire mobile development lifecycle, from concept to deployment. The role requires expertise in native or cross-platform development frameworks. You'll work closely with designers and product managers to create user-friendly and performant mobile applications.",
+    "location": "Gujarat",
+    "company_id": 8,
+    "company": {
+      "id": 8,
+      "name": "Uber",
+      "logo_url": "/companies/uber.svg"
+    },
+    "requirements": "3+ years of mobile development experience, Proficiency in React Native, Flutter, or native development, Experience with mobile app deployment, Knowledge of mobile UI/UX principles, Understanding of mobile security best practices, Experience with mobile testing frameworks",
+    "isOpen": true,
+    "recruiter_id": "rec_006",
+    "created_at": "2024-01-10T13:15:00Z",
+    "salary_min": 1100000,
+    "salary_max": 1900000,
+    "job_type": "Full-time",
+    "experience_level": "Mid-level"
+  },
+  {
+    "id": 7,
+    "title": "UI/UX Designer",
+    "description": "Join our design team as a UI/UX Designer to create exceptional user experiences. You will be responsible for user research, wireframing, prototyping, and visual design. The role involves collaborating with product managers and developers to ensure design feasibility and implementation. You'll conduct user testing and iterate on designs based on feedback. A strong portfolio demonstrating design thinking and problem-solving skills is essential.",
+    "location": "West Bengal",
+    "company_id": 2,
+    "company": {
+      "id": 2,
+      "name": "Atlassian",
+      "logo_url": "/companies/atlassian.svg"
+    },
+    "requirements": "3+ years of UI/UX design experience, Proficiency in design tools (Figma, Sketch, Adobe Creative Suite), Strong understanding of user-centered design principles, Experience with user research and testing, Knowledge of design systems and component libraries, Portfolio demonstrating design process and outcomes",
+    "isOpen": true,
+    "recruiter_id": "rec_007",
+    "created_at": "2024-01-09T10:45:00Z",
+    "salary_min": 900000,
+    "salary_max": 1600000,
+    "job_type": "Full-time",
+    "experience_level": "Mid-level"
+  },
+  {
+    "id": 8,
+    "title": "Product Manager",
+    "description": "We're seeking an experienced Product Manager to drive product strategy and execution. You will work cross-functionally with engineering, design, and business teams to deliver products that meet customer needs and business objectives. The role involves market research, competitive analysis, and product roadmap planning. You'll be responsible for defining product requirements, prioritizing features, and ensuring successful product launches.",
+    "location": "Maharashtra",
+    "company_id": 5,
+    "company": {
+      "id": 5,
+      "name": "Meta",
+      "logo_url": "/companies/meta.svg"
+    },
+    "requirements": "5+ years of product management experience, Strong analytical and problem-solving skills, Experience with product management tools (Jira, Confluence, Figma), Understanding of agile development methodologies, Excellent communication and leadership skills, MBA or relevant technical degree preferred",
+    "isOpen": true,
+    "recruiter_id": "rec_008",
+    "created_at": "2024-01-08T15:20:00Z",
+    "salary_min": 1800000,
+    "salary_max": 3000000,
+    "job_type": "Full-time",
+    "experience_level": "Senior"
+  },
+  {
+    "id": 9,
+    "title": "Junior Frontend Developer",
+    "description": "Great opportunity for a Junior Frontend Developer to start their career in web development. You will work under the guidance of senior developers to build user interfaces and learn modern development practices. The role involves implementing designs, writing clean code, and participating in code reviews. We provide mentorship and training opportunities to help you grow your skills and advance your career.",
+    "location": "Karnataka",
+    "company_id": 3,
+    "company": {
+      "id": 3,
+      "name": "Google",
+      "logo_url": "/companies/google.webp"
+    },
+    "requirements": "1-2 years of frontend development experience, Basic knowledge of HTML, CSS, and JavaScript, Familiarity with React.js or similar frameworks, Understanding of responsive design, Eagerness to learn and grow, Good communication skills",
+    "isOpen": true,
+    "recruiter_id": "rec_009",
+    "created_at": "2024-01-07T12:00:00Z",
+    "salary_min": 600000,
+    "salary_max": 1000000,
+    "job_type": "Full-time",
+    "experience_level": "Entry-level"
+  },
+  {
+    "id": 10,
+    "title": "Cloud Architect",
+    "description": "We're looking for a Cloud Architect to design and implement cloud infrastructure solutions. You will be responsible for cloud strategy, architecture design, and migration planning. The role involves working with various cloud platforms and ensuring scalability, security, and cost optimization. You'll collaborate with development teams to design cloud-native applications and provide technical leadership on cloud initiatives.",
+    "location": "Delhi",
+    "company_id": 1,
+    "company": {
+      "id": 1,
+      "name": "Amazon",
+      "logo_url": "/companies/amazon.svg"
+    },
+    "requirements": "7+ years of cloud architecture experience, Expert knowledge of AWS, Azure, or GCP, Experience with infrastructure as code, Strong understanding of cloud security, Knowledge of containerization and orchestration, Cloud certifications preferred",
+    "isOpen": true,
+    "recruiter_id": "rec_010",
+    "created_at": "2024-01-06T09:30:00Z",
+    "salary_min": 2000000,
+    "salary_max": 3500000,
+    "job_type": "Full-time",
+    "experience_level": "Senior"
+  },
+  {
+    "id": 11,
+    "title": "QA Engineer",
+    "description": "Join our quality assurance team to ensure the delivery of high-quality software products. You will be responsible for test planning, test case development, and test execution. The role involves both manual and automated testing, working closely with development teams to identify and resolve issues. You'll contribute to improving testing processes and implementing best practices for quality assurance.",
+    "location": "Rajasthan",
+    "company_id": 6,
+    "company": {
+      "id": 6,
+      "name": "Microsoft",
+      "logo_url": "/companies/microsoft.webp"
+    },
+    "requirements": "3+ years of QA experience, Experience with test automation tools (Selenium, Cypress), Knowledge of testing methodologies and best practices, Familiarity with API testing, Understanding of CI/CD processes, Strong attention to detail",
+    "isOpen": true,
+    "recruiter_id": "rec_011",
+    "created_at": "2024-01-05T14:45:00Z",
+    "salary_min": 800000,
+    "salary_max": 1400000,
+    "job_type": "Full-time",
+    "experience_level": "Mid-level"
+  },
+  {
+    "id": 12,
+    "title": "Security Engineer",
+    "description": "We're seeking a Security Engineer to protect our systems and data from cyber threats. You will be responsible for implementing security measures, conducting security assessments, and responding to security incidents. The role involves working with various security tools and technologies to monitor and protect our infrastructure. You'll collaborate with development teams to ensure secure coding practices and compliance with security standards.",
+    "location": "Haryana",
+    "company_id": 4,
+    "company": {
+      "id": 4,
+      "name": "IBM",
+      "logo_url": "/companies/ibm.svg"
+    },
+    "requirements": "4+ years of cybersecurity experience, Knowledge of security frameworks and standards, Experience with security tools (SIEM, vulnerability scanners), Understanding of network security, Incident response experience, Security certifications preferred (CISSP, CEH)",
+    "isOpen": false,
+    "recruiter_id": "rec_012",
+    "created_at": "2024-01-04T11:20:00Z",
+    "salary_min": 1500000,
+    "salary_max": 2500000,
+    "job_type": "Full-time",
+    "experience_level": "Senior"
+  }
+]

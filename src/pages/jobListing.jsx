@@ -18,6 +18,8 @@ import {
 
 import { getCompanies } from "@/api/apiCompanies";
 import { getJobs } from "@/api/apiJobs";
+import companiesData from "@/data/companies.json";
+import jobsData from "@/data/jobs.json";
 
 const JobListing = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -40,6 +42,16 @@ const JobListing = () => {
     location,
     company_id,
     searchQuery,
+  });
+
+  // Fallback to dummy data if API fails
+  const displayCompanies = companies || companiesData;
+  const displayJobs = jobs || jobsData.filter(job => {
+    let filtered = true;
+    if (location && job.location !== location) filtered = false;
+    if (company_id && job.company_id !== parseInt(company_id)) filtered = false;
+    if (searchQuery && !job.title.toLowerCase().includes(searchQuery.toLowerCase())) filtered = false;
+    return filtered;
   });
 
   useEffect(() => {
@@ -119,7 +131,7 @@ const JobListing = () => {
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              {companies?.map(({ name, id }) => {
+              {displayCompanies?.map(({ name, id }) => {
                 return (
                   <SelectItem key={name} value={id}>
                     {name}
@@ -144,8 +156,8 @@ const JobListing = () => {
 
       {loadingJobs === false && (
         <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {jobs?.length ? (
-            jobs.map((job) => {
+          {displayJobs?.length ? (
+            displayJobs.map((job) => {
               return (
                 <JobCard
                   key={job.id}

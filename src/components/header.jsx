@@ -43,35 +43,47 @@ const Header = () => {
             </Button>
           </SignedOut>
           <SignedIn>
-            {user?.unsafeMetadata?.role === "recruiter" && (
-              <Link to="/post-job">
-                <Button variant="destructive" className="rounded-full">
-                  <PenBox size={20} className="mr-2" />
-                  Post a Job
+            <div className="flex items-center gap-4">
+              <Link to="/jobs">
+                <Button variant="ghost">
+                  Browse Jobs
                 </Button>
               </Link>
-            )}
-            <UserButton
-              appearance={{
-                elements: {
-                  avatarBox: "w-10 h-10",
-                },
-              }}
-            >
-              <UserButton.MenuItems>
-                <UserButton.Link
-                  label="My Jobs"
-                  labelIcon={<BriefcaseBusiness size={15} />}
-                  href="/my-jobs"
-                />
-                <UserButton.Link
-                  label="Saved Jobs"
-                  labelIcon={<Heart size={15} />}
-                  href="/saved-jobs"
-                />
-                <UserButton.Action label="manageAccount" />
-              </UserButton.MenuItems>
-            </UserButton>
+              {user?.unsafeMetadata?.role === "recruiter" && (
+                <Link to="/post-job">
+                  <Button variant="destructive" className="rounded-full">
+                    <PenBox size={20} className="mr-2" />
+                    Post a Job
+                  </Button>
+                </Link>
+              )}
+              <Link to="/admin">
+                <Button variant="outline" size="sm">
+                  Admin
+                </Button>
+              </Link>
+              <UserButton
+                appearance={{
+                  elements: {
+                    avatarBox: "w-10 h-10",
+                  },
+                }}
+              >
+                <UserButton.MenuItems>
+                  <UserButton.Link
+                    label="My Jobs"
+                    labelIcon={<BriefcaseBusiness size={15} />}
+                    href="/my-jobs"
+                  />
+                  <UserButton.Link
+                    label="Saved Jobs"
+                    labelIcon={<Heart size={15} />}
+                    href="/saved-jobs"
+                  />
+                  <UserButton.Action label="manageAccount" />
+                </UserButton.MenuItems>
+              </UserButton>
+            </div>
           </SignedIn>
         </div>
       </nav>

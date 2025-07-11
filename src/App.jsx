@@ -11,6 +11,7 @@ import JobListing from "./pages/jobListing";
 import MyJobs from "./pages/my-jobs";
 import SavedJobs from "./pages/saved-jobs";
 import JobPage from "./pages/job";
+import AdminPage from "./pages/admin";
 
 import "./App.css";
 
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
             <JobPage />
           </ProtectedRoute>
         ),
+      },
+      {
+        path: "/admin",
+        element: <AdminPage />,
       },
     ],
   },
