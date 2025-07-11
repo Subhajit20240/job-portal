@@ -1,54 +1,98 @@
-import { getSavedJobs } from "@/api/apiJobs";
+// import { getSavedJobs } from "@/api/apiJobs";
+// import JobCard from "@/components/job-card";
+// import useFetch from "@/hooks/use-fetch";
+// import { useUser } from "@clerk/clerk-react";
+// import { useEffect } from "react";
+// import { BarLoader } from "react-spinners";
+
+// const SavedJobs = () => {
+//   const { isLoaded } = useUser();
+
+//   const {
+//     loading: loadingSavedJobs,
+//     data: savedJobs,
+//     fn: fnSavedJobs,
+//   } = useFetch(getSavedJobs);
+
+//   useEffect(() => {
+//     if (isLoaded) {
+//       fnSavedJobs();
+//     }
+//     // eslint-disable-next-line react-hooks/exhaustive-deps
+//   }, [isLoaded]);
+
+//   if (!isLoaded || loadingSavedJobs) {
+//     return <BarLoader className="mb-4" width={"100%"} color="#36d7b7" />;
+//   }
+
+//   return (
+//     <div>
+//       <h1 className="gradient-title font-extrabold text-6xl sm:text-7xl text-center pb-8">
+//         Saved Jobs
+//       </h1>
+
+//       {loadingSavedJobs === false && (
+//         <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+//           {savedJobs?.length ? (
+//             savedJobs?.map((saved) => {
+//               return (
+//                 <JobCard
+//                   key={saved.id}
+//                   job={saved?.job}
+//                   onJobAction={fnSavedJobs}
+//                   savedInit={true}
+//                 />
+//               );
+//             })
+//           ) : (
+//             <div>No Saved Jobs 👀</div>
+//           )}
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default SavedJobs;
+
+import { useEffect, useState } from "react";
 import JobCard from "@/components/job-card";
 import useFetch from "@/hooks/use-fetch";
+import { getSavedJobs } from "@/api/apiJobs";
 import { useUser } from "@clerk/clerk-react";
-import { useEffect } from "react";
 import { BarLoader } from "react-spinners";
 
 const SavedJobs = () => {
-  const { isLoaded } = useUser();
+  const { user } = useUser();
+  const [jobs, setJobs] = useState([]);
 
-  const {
-    loading: loadingSavedJobs,
-    data: savedJobs,
-    fn: fnSavedJobs,
-  } = useFetch(getSavedJobs);
+  const { loading, data, fn } = useFetch(getSavedJobs);
 
   useEffect(() => {
-    if (isLoaded) {
-      fnSavedJobs();
+    if (user?.id) {
+      fn({ user_id: user.id });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isLoaded]);
+  }, [user]);
 
-  if (!isLoaded || loadingSavedJobs) {
-    return <BarLoader className="mb-4" width={"100%"} color="#36d7b7" />;
-  }
+  useEffect(() => {
+    if (data) {
+      setJobs(data);
+    }
+  }, [data]);
 
   return (
-    <div>
-      <h1 className="gradient-title font-extrabold text-6xl sm:text-7xl text-center pb-8">
-        Saved Jobs
-      </h1>
-
-      {loadingSavedJobs === false && (
-        <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {savedJobs?.length ? (
-            savedJobs?.map((saved) => {
-              return (
-                <JobCard
-                  key={saved.id}
-                  job={saved?.job}
-                  onJobAction={fnSavedJobs}
-                  savedInit={true}
-                />
-              );
-            })
-          ) : (
-            <div>No Saved Jobs 👀</div>
-          )}
-        </div>
-      )}
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">Saved Jobs</h2>
+      {loading && <BarLoader width="100%" color="#36d7b7" />}
+      <div className="grid gap-4">
+        {jobs.length > 0 ? (
+          jobs.map((job) => (
+            <JobCard key={job.id} job={job} savedInit={true} />
+          ))
+        ) : (
+          !loading && <p>No saved jobs found.</p>
+        )}
+      </div>
     </div>
   );
 };
